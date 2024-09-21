@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "@noble/curves/bn254 with hash-to-curve & signature implementations for drand",
   "main": "dist/src/index.js",
-  "files": ["dist/**/*", "!dist/test"],
+  "files": [
+    "dist/**/*",
+    "!dist/test"
+  ],
   "engines": {
     "node": ">=18"
   },
@@ -20,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "@types/node": "^18",

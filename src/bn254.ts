@@ -384,9 +384,15 @@ export const bn254: CurveFn = bls({
             )
         },
         Signature: {
-            fromHex: notImplemented,
-            toRawBytes: notImplemented,
-            toHex: notImplemented,
+            fromHex(hex: Hex): ProjPointType<Fp2> {
+                return bn254.G2.ProjectivePoint.fromHex(hex)
+            },
+            toRawBytes(point: ProjPointType<Fp2>) {
+                return point.toRawBytes()
+            },
+            toHex(point: ProjPointType<Fp2>) {
+                return point.toHex()
+            },
         },
     },
     params: {
