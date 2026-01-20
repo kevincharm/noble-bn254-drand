@@ -1,6 +1,7 @@
-import { expect } from 'chai'
-import { bn254 } from '../src/index.js'
+import { describe, it } from 'node:test'
+import assert from 'node:assert/strict'
 import { keccak_256 } from '@noble/hashes/sha3.js'
+import { bn254 } from '../src/index.js'
 import { beacons, chainInfo, DST } from './data.js'
 
 describe('bn254', () => {
@@ -15,7 +16,7 @@ describe('bn254', () => {
                         DST,
                     },
                 )
-                expect(isValid).to.eq(true)
+                assert.equal(isValid, true)
             })
         }
     })
