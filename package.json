@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@noble/curves": "^2.0.1",
-    "@types/node": "^18",
+    "@types/node": "^20",
     "prettier": "^3.3.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.2"
