@@ -20,6 +20,15 @@ describe('bn254', () => {
             })
         }
     })
+
+    it('should sign and verify a message with a generated key', () => {
+        const message = new TextEncoder().encode('hello bn254')
+        const { secretKey, publicKey } = bn254.shortSignatures.keygen()
+        const msgPoint = bn254.shortSignatures.hash(message)
+        const signature = bn254.shortSignatures.sign(msgPoint, secretKey)
+        const isValid = bn254.shortSignatures.verify(signature, msgPoint, publicKey)
+        assert.equal(isValid, true)
+    })
 })
 
 function roundBuffer(round: number) {
