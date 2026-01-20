@@ -1,1 +1,1 @@
-export * from './bn254'
+export * from './bn254.js'

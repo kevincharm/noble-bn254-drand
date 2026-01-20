@@ -2,18 +2,16 @@
   "name": "@kevincharm/noble-bn254-drand",
   "version": "0.0.1",
   "description": "@noble/curves/bn254 with hash-to-curve & signature implementations for drand",
+  "type": "module",
   "main": "dist/src/index.js",
-  "files": [
-    "dist/**/*",
-    "!dist/test"
-  ],
+  "files": ["dist/**/*", "!dist/test"],
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316",
   "scripts": {
-    "prepare": "yarn tsc",
-    "test": "NODE_OPTIONS=--experimental-global-webcrypto yarn mocha -r ts-node/register test/**/*.spec.ts"
+    "prepack": "pnpm tsc",
+    "test": "pnpm tsc && NODE_OPTIONS=--experimental-global-webcrypto pnpm mocha dist/test/**/*.spec.js"
   },
   "author": "Kevin Charm <kevin@kevincharm.com>",
   "repository": {
@@ -22,8 +20,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@noble/curves": "^1.6.0",
-    "@noble/hashes": "^1.5.0",
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "@types/node": "^18",
@@ -31,9 +29,9 @@
     "mocha": "^10.6.0",
     "prettier": "^3.3.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "@noble/curves": "^1.6.0"
+    "@noble/curves": "^2.0.1"
   }
 }

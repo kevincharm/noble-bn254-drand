@@ -7,7 +7,7 @@ As found at [@noble/curves/bn254](https://github.com/paulmillr/noble-curves/blob
 You must also install `@noble/curves@^1.6.0` as a peer dependency.
 
 ```bash
-yarn add @noble/curves @kevincharm/noble-bn254-drand
+pnpm add @noble/curves @kevincharm/noble-bn254-drand
 ```
 
 ## Notable features

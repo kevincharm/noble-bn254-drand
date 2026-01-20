@@ -1,7 +1,7 @@
 import { expect } from 'chai'
-import { bn254 } from '../src'
-import { keccak_256 } from '@noble/hashes/sha3'
-import { beacons, chainInfo, DST } from './data'
+import { bn254 } from '../src/index.js'
+import { keccak_256 } from '@noble/hashes/sha3.js'
+import { beacons, chainInfo, DST } from './data.js'
 
 describe('bn254', () => {
     describe('#verifyShortSignature on drand evmnet beacons', () => {
